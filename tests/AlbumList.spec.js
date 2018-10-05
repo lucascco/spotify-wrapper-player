@@ -111,7 +111,7 @@ describe('AlbumList', () => {
     expect(element.innerHTML).to.be.eql(markup);
   });
 
-  it('shouyld append an list of albuns as data', () => {
+  it('should append an list of albuns as data', () => {
     const element2 = document.createElement('div');
     renderAlbum(dataAlums2, element2);
     expect(element2.innerHTML).to.be.eqls(markup2);
