@@ -13,6 +13,6 @@ const elementAlbumInfo = document.getElementById('album-info');
 const elementAlbumTracks = document.getElementById('album-tracks');
 
 albumInfo.then(data => renderAlbumInfo(data, elementAlbumInfo))
-  .then(data => renderAlbumTracks(data.tracks.items, elementAlbumTracks))
+  .then(data => renderAlbumTracks(data.tracks.items, elementAlbumTracks));
 
 albums.then(data => renderAlbum(data.albums.items, elementAlbums));
