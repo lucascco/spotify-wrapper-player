@@ -28,33 +28,35 @@ describe('AlbumTracks', () => {
     }
   ];
 
-
-  it('should create and append markup to correc data', () => {
-    const markup = `
-    <div class="music active" data-track-preview="https://p.scdn.co/mp3-preview/ab3d501c5ffbf560e94094f76cd36d874a26e941?cid=8897482848704f2a8f8d7c79726a70d4">
+  const markup = `
+    <div class="music" data-track-preview="https://p.scdn.co/mp3-preview/ab3d501c5ffbf560e94094f76cd36d874a26e941?cid=8897482848704f2a8f8d7c79726a70d4">
       <p class="music-number">1</p>
       <p class="music-title">Around The World</p>
       <p class="music-duration">238733</p>
     </div>`;
+
+  const markup2 = `
+    <div class="music" data-track-preview="https://p.scdn.co/mp3-preview/ab3d501c5ffbf560e94094f76cd36d874a26e941?cid=8897482848704f2a8f8d7c79726a70d4">
+      <p class="music-number">1</p>
+      <p class="music-title">Around The World</p>
+      <p class="music-duration">238733</p>
+    </div>
+    <div class="music" data-track-preview="https://p.scdn.co/mp3-preview/ab3d501c5ffbf560e94094f76cd36d874a26e941?cid=8897482848704f2a8f8d7c79726a70d4">
+      <p class="music-number">1</p>
+      <p class="music-title">Around The World</p>
+      <p class="music-duration">238733</p>
+    </div>`;
+
+  it('should create and append markup to correc data', () => {
     const element = document.createElement('div');
     renderAlbumTracks(data, element);
     expect(element.innerHTML).to.be.eql(markup);
   });
 
   it('should create and append markup to all itens', () => {
-    const markup = `
-    <div class="music active" data-track-preview="https://p.scdn.co/mp3-preview/ab3d501c5ffbf560e94094f76cd36d874a26e941?cid=8897482848704f2a8f8d7c79726a70d4">
-      <p class="music-number">1</p>
-      <p class="music-title">Around The World</p>
-      <p class="music-duration">238733</p>
-    </div>
-    <div class="music active" data-track-preview="https://p.scdn.co/mp3-preview/ab3d501c5ffbf560e94094f76cd36d874a26e941?cid=8897482848704f2a8f8d7c79726a70d4">
-      <p class="music-number">1</p>
-      <p class="music-title">Around The World</p>
-      <p class="music-duration">238733</p>
-    </div>`;
     const element = document.createElement('div');
     renderAlbumTracks(data2, element);
-    expect(element.innerHTML).to.be.eql(markup);
+    expect(element.innerHTML).to.be.eql(markup2);
   });
+
 });
