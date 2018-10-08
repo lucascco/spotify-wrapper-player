@@ -80,28 +80,28 @@ describe('AlbumList', () => {
   ];
 
   const markup = `
-    <div class="list-item">
-      <img src="${dataAlbum[0].images[0].url}" alt="${dataAlbum[0].name}" class="list-image">
-      <div class="list-description">
-        <p class="list-title">${dataAlbum[0].name}</p>
-        <p class="list-subtitle">${dataAlbum[0].artists[0].name}</p>
+    <div class="list-item" data-album-id="${dataAlbum[0].id}">
+      <img src="${dataAlbum[0].images[0].url}" alt="${dataAlbum[0].name}" class="list-image" data-album-id="${dataAlbum[0].id}">
+      <div class="list-description" data-album-id="${dataAlbum[0].id}">
+        <p class="list-title" data-album-id="${dataAlbum[0].id}">${dataAlbum[0].name}</p>
+        <p class="list-subtitle" data-album-id="${dataAlbum[0].id}">${dataAlbum[0].artists[0].name}</p>
       </div>
     </div>`;
 
 
     const markup2 = `
-    <div class="list-item">
-      <img src="${dataAlums2[0].images[0].url}" alt="${dataAlums2[0].name}" class="list-image">
-      <div class="list-description">
-        <p class="list-title">${dataAlums2[0].name}</p>
-        <p class="list-subtitle">${dataAlums2[0].artists[0].name}</p>
+    <div class="list-item" data-album-id="${dataAlums2[0].id}">
+      <img src="${dataAlums2[0].images[0].url}" alt="${dataAlums2[0].name}" class="list-image" data-album-id="${dataAlums2[0].id}">
+      <div class="list-description" data-album-id="${dataAlums2[0].id}">
+        <p class="list-title" data-album-id="${dataAlums2[0].id}">${dataAlums2[0].name}</p>
+        <p class="list-subtitle" data-album-id="${dataAlums2[0].id}">${dataAlums2[0].artists[0].name}</p>
       </div>
     </div>
-    <div class="list-item">
-      <img src="${dataAlums2[1].images[0].url}" alt="${dataAlums2[1].name}" class="list-image">
-      <div class="list-description">
-        <p class="list-title">${dataAlums2[1].name}</p>
-        <p class="list-subtitle">${dataAlums2[1].artists[0].name}</p>
+    <div class="list-item" data-album-id="${dataAlums2[1].id}">
+      <img src="${dataAlums2[1].images[0].url}" alt="${dataAlums2[1].name}" class="list-image" data-album-id="${dataAlums2[1].id}">
+      <div class="list-description" data-album-id="${dataAlums2[1].id}">
+        <p class="list-title" data-album-id="${dataAlums2[1].id}">${dataAlums2[1].name}</p>
+        <p class="list-subtitle" data-album-id="${dataAlums2[1].id}">${dataAlums2[1].artists[0].name}</p>
       </div>
     </div>`;
 
