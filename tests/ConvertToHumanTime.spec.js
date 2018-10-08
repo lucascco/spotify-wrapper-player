@@ -25,8 +25,11 @@ describe('ConvertToHumanTime', () => {
     expect(convertToHumanTime(75000)).to.be.eql('1:15');
   });
 
-
   it('should return 15:00 when pass 900000ms', () => {
     expect(convertToHumanTime(900000)).to.be.eql('15:00');
+  });
+
+  it('should return 3:35 when pass 214946ms', () => {
+    expect(convertToHumanTime(214946)).to.be.eql('3:34');
   });
 });
