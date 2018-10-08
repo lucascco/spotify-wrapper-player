@@ -1,5 +1,6 @@
 export default function renderAlbumTracks(data, element) {
- element.innerHTML = data.map(track => `
+  const elementTarget = element;
+  elementTarget.innerHTML = data.map(track => `
     <div class="music active" data-track-preview="${track.preview_url}">
       <p class="music-number">${track.track_number}</p>
       <p class="music-title">${track.name}</p>
